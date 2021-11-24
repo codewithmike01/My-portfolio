@@ -20,8 +20,8 @@ body {
 
 .hero {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   background-image: url(./images/headerTrans.png), url(./images/headerBack.png);
   background-repeat: no-repeat, no-repeat;
   background-position: 95%;
@@ -49,6 +49,7 @@ header {
 .logo {
   text-align: center;
 }
+
 .logo a {
   text-decoration: none;
   font-size: 18px;
