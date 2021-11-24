@@ -1,0 +1,20 @@
+{
+  "name": "My-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio website to showcase my information as a web developer and my created projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ginohmk/My-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ginohmk/My-portfolio/issues"
+  },
+  "homepage": "https://github.com/Ginohmk/My-portfolio#readme"
+}
