@@ -143,7 +143,7 @@ header {
   flex: 1;
   height: 100%;
   padding-bottom: 20px;
-  width: 100%;
+  width: 87%;
   background-color: #fff;
   border-radius: 15px;
 }
@@ -218,8 +218,8 @@ header {
   border-radius: 8px;
 }
 
-.see-project p,
-.see-resume p {
+.see-project .p,
+.see-resume .p {
   font-size: 0.9rem;
 }
 
@@ -255,7 +255,7 @@ header {
   background: #fff;
 }
 
-.see-project p {
+.see-project .p {
   line-height: 24px;
   font-size: 1rem;
 }
