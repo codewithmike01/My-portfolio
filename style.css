@@ -55,7 +55,7 @@ header {
 .logo a {
   text-decoration: none;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 20;
   font-weight: bold;
   color: #6070ff;
 }
@@ -237,6 +237,8 @@ header {
 
 /* Project Button links */
 
+/* Hover */
+.form-button:hover,
 .see-project:hover,
 .see-resume:hover {
   color: #fff;
@@ -244,15 +246,20 @@ header {
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
 }
 
+/* Pressed */
+.form-button:active,
 .see-project:active,
 .see-resume:active {
   background-color: #2230d2;
 }
 
-.see-project:link,
-.see-resume:link {
-  border: 1px solid #dfe1e6;
-  background: #fff;
+/* Enabled */
+.form-button:visited,
+.see-project:visited,
+.see-resume:visited {
+  border: 1px solid #7f8cff;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .see-project .p {
@@ -266,6 +273,7 @@ header {
   background-color: #fff;
   width: 100%;
   padding-top: 114px;
+  padding-bottom: 114px;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -385,4 +393,150 @@ header {
   height: 1px;
   width: 97%;
   border: 1px solid #dfe1e6;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: #6070ff;
+  border-top-left-radius: 25% 60px;
+  padding-bottom: 8px;
+  margin-top: -60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.trans-background {
+  margin-top: 12px;
+  height: 867px;
+  width: 265px;
+  position: absolute;
+  top: 0;
+  right: -3px;
+  border-radius: 0;
+  background-image: url(./images/contact-form-Bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+
+.contact-me {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-top: 103px;
+}
+
+.contact-heading h2 {
+  color: #fff;
+  line-height: 52px;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.contact-description {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 77px;
+  margin-top: 12px;
+}
+
+.contact-description p {
+  text-align: center;
+  color: #ebebff;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+input[type="text"]::placeholder,
+input[type="text"]::-ms-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::placeholder,
+input[type="email"]::-ms-input-placeholder,
+input[type="email"]:-webkit-input-placeholder {
+  color: #172b4d;
+  opacity: 1;
+}
+
+textarea::placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b3bac5;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="email"]:active,
+input[type="email"]:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+}
+
+.contact-form ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form ul li {
+  list-style-type: none;
+}
+
+.contact-form li input {
+  border: 1px solid #cfd8dc;
+  height: 48px;
+  border-radius: 8px;
+  width: 100%;
+  color: #172b4d;
+  padding: 15px 38px 15px 16px;
+}
+
+.text-area {
+  padding: 15px 38px 15px 16px;
+  background-color: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #b3bac5;
+  line-height: 24px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.contact-form button {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #fff;
+  color: #6070ff;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  width: 140px;
+  height: 48px;
+  margin-top: 22px;
+  margin-bottom: 45px;
+}
+
+.footer-line {
+  height: 5px;
+  width: 134px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #0d151e;
 }
