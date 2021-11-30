@@ -19,6 +19,7 @@ html {
 /* Document code */
 
 body {
+  position: relative;
   background: #e5e5e5;
   font-family: "Poppins", sans-serif;
 }
@@ -33,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 12%;
 }
 
@@ -41,6 +43,7 @@ body {
 }
 
 header {
+  position: relative;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -55,7 +58,7 @@ header {
 .logo a {
   text-decoration: none;
   font-size: 18px;
-  line-height: 20;
+  line-height: 20px;
   font-weight: bold;
   color: #6070ff;
 }
@@ -408,7 +411,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .trans-background {
@@ -422,14 +425,14 @@ footer {
   background-image: url(./images/contact-form-Bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -10;
+  z-index: 10;
 }
 
 .contact-me {
   position: relative;
   width: 90%;
   margin: 0 auto;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .contact-heading {
