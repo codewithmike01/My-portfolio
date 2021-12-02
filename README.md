@@ -2,11 +2,11 @@
 
 My portfolio website to showcase my information as a web developer and my created projects
 
-# hello-micro
+# hello-microverse
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello World
+
 
 This is the first GitHub Flow project
 
