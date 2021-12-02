@@ -138,7 +138,9 @@ header {
 
 .project-show-case {
   width: 100%;
-  margin: 114px 24px;
+  margin: 0 24px;
+  margin-bottom: 114px;
+  margin-top: 87px;
   display: grid;
   grid-template-columns: auto;
   row-gap: 88px;
@@ -673,7 +675,7 @@ textarea:focus {
   .project-show-case {
     width: 95%;
     margin: 0 auto;
-    margin-top: 114px;
+    margin-top: -38px;
     margin-bottom: 194px;
     row-gap: 152px;
     grid-template-rows: auto;
