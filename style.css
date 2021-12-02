@@ -60,6 +60,11 @@ header {
 
 .logo {
   text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
 }
 
 .logo a {
