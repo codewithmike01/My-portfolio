@@ -60,6 +60,11 @@ header {
 
 .logo {
   text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
 }
 
 .logo a {
@@ -79,10 +84,34 @@ header {
 }
 
 .banner h1 {
+  position: relative;
   width: 70%;
   font-size: 2.1rem;
   line-height: 52px;
   color: #172b4d;
+  animation: slide-right 1s ease-in-out;
+}
+
+@keyframes slide-right {
+  0% {
+    left: 700px;
+  }
+
+  25% {
+    left: 500px;
+  }
+
+  50% {
+    left: 300px;
+  }
+
+  75% {
+    left: 100px;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 .banner p {
@@ -91,6 +120,29 @@ header {
   font-weight: 400;
   color: #344563;
   margin: 12px 0;
+  animation: Fade-in 1s ease-in-out 0.8s;
+}
+
+@keyframes Fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.04;
+  }
+
+  50% {
+    opacity: 0.08;
+  }
+
+  75% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .project-img img {
@@ -105,8 +157,32 @@ header {
 }
 
 .connect {
+  position: relative;
   flex-direction: column;
   gap: 20px;
+  animation: slide-left 1s ease-in-out;
+}
+
+@keyframes slide-left {
+  0% {
+    right: 700px;
+  }
+
+  25% {
+    right: 500px;
+  }
+
+  50% {
+    right: 300px;
+  }
+
+  75% {
+    right: 100px;
+  }
+
+  100% {
+    right: 0;
+  }
 }
 
 .connect h2 {
@@ -388,6 +464,25 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
+  transition: transform 1s ease-in-out;
+}
+
+.contact-form ul li {
+  list-style-type: none;
+}
+
+.contact-form ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lang-icon li:hover,
+.framework-icon li:hover,
+.skill-icon li:hover {
+  transform: scaleX(0.3);
 }
 
 .lang-name {
@@ -499,18 +594,6 @@ input[type="email"]:focus,
 textarea:active,
 textarea:focus {
   outline: none;
-}
-
-.contact-form ul {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form ul li {
-  list-style-type: none;
 }
 
 .contact-form li input {
