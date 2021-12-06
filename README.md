@@ -12,6 +12,10 @@ This is the first GitHub Flow project
 
 Additional description about the project and its features.
 
+## Live Preview
+
+LIVE DEMO: [Myportfolio](https://ginohmk.github.io/My-portfolio/)
+
 ## Built With
 
 - HTML & CSS
@@ -38,7 +42,7 @@ run `npm install` to install dependencies
 - GitHub: [@Ginohmk](https://github.com/Ginohmk)
 - Twitter: [@michotall95](https://www.twitter.com/michotall95)
 - LinkedIn: [@kanumike](https://www.linkedin.com/in/kanu-mike-497119211/)
-- Instagram: [@savy_kanu_mike] (https/instagram.com/savy_kanu_mike)
+- Instagram: [@savy_kanu_mike](https/instagram.com/savy_kanu_mike)
 - Facebook: [@mike.kanu](https://www.facebook.com/mike.kanu)
 
 ## 🤝 Contribute
