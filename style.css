@@ -401,7 +401,7 @@ header {
   color: #344563;
 }
 
-.about-connect p {
+.about-connect h3 {
   color: #7f8cff;
   font-size: 1rem;
   line-height: 24px;
@@ -430,7 +430,7 @@ header {
   align-items: center;
 }
 
-.select-lang p {
+.select-lang h3 {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 24px;
