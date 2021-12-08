@@ -6,7 +6,7 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
@@ -20,6 +20,8 @@ html {
 /* Document code */
 
 body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   position: relative;
   background: #e5e5e5;
   font-family: "Poppins", sans-serif;
@@ -36,6 +38,7 @@ body {
   border-bottom-left-radius: 25% 50px;
   background-size: cover;
   height: 93vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -647,7 +650,7 @@ textarea:focus {
 
 /* Mobile Screen less than 300px */
 
-@media screen and (max-width: 300px) {
+@media (max-width: 300px) {
   .see-project .p {
     font-size: 0.8rem;
   }
@@ -659,7 +662,7 @@ textarea:focus {
 
 /* Desktop view 992px */
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .Ham-menu {
     display: none;
   }
@@ -711,7 +714,6 @@ textarea:focus {
     background-image: none;
     height: 83vh;
     border-bottom-left-radius: 25% 100px;
-    overflow: hidden;
   }
 
   .desktop-bg {
@@ -725,7 +727,6 @@ textarea:focus {
     margin-top: 90px;
     margin-right: 8px;
     position: absolute;
-    overflow: hidden;
   }
 
   header {
@@ -901,7 +902,7 @@ textarea:focus {
 
 /* For higher resolution (desktop) */
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .project-img.one,
   .project-img.two,
   .project-img.three,
