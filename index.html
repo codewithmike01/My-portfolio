@@ -26,30 +26,39 @@
   <body>
     <section class="hero">
       <div class="desktop-bg"></div>
+      <!-- header -->
       <header>
         <div class="logo"><a href="#"> My Logo</a></div>
         <nav class="menu">
-          <a href="#" class="Ham-menu">
+          <a href="#" class="Ham-menu hide-ham">
             <img src="./images/Union.png" alt="Ham buger menu" />
           </a>
-          <section class="desktop-menu">
+          <section class="desktop-menu hide">
+            <div class="cancel-dropDown">
+              <a href="#">
+                <img src="./images/Cancel.svg" alt="close mobile menu"
+              /></a>
+            </div>
+
             <ul>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about"> About</a></li>
-              <li><a href="#contact"> Contact</a></li>
+              <li class="link"><a href="#portfolio">Portfolio</a></li>
+              <li class="link"><a href="#about"> About</a></li>
+              <li class="link"><a href="#contact"> Contact</a></li>
             </ul>
+            <div class="mobile-line"></div>
           </section>
         </nav>
       </header>
+      <!-- banner -->
       <section class="banner">
-        <h1>I'm Mike <br />Glad to see you!</h1>
+        <h1 class="greet">I'm Mike <br />Glad to see you!</h1>
         <p class="banner-detail">
           I’m a software developer! I can help you build a product , feature or
           website Look through some of my work and experience! If you like what
           you see and have a project you need coded, don’t hestiate to contact
           me.
         </p>
-
+        <!-- Connect -->
         <section class="connect">
           <h2>LET'S CONNECT</h2>
           <ul class="social-icon">
@@ -81,10 +90,11 @@
       </section>
     </section>
 
+    <!-- main -->
     <main>
       <section class="project-show-case">
         <a name="portfolio"></a>
-        <section class="project-card">
+        <section class="project-card" id="portfolio">
           <div class="project-img one">
             <img src="./images/imageprofile4x.png" alt="Tonic-Project Image" />
           </div>
@@ -331,7 +341,7 @@
 
     <footer>
       <div class="trans-background"></div>
-      <a name="contact"></a>
+      <a id="contact"></a>
       <section class="contact-me">
         <div class="contact-heading">
           <h2>Contact me</h2>
