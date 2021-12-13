@@ -32,6 +32,7 @@ body {
 }
 
 .hero {
+  position: relative;
   background-image: url(./images/headerTrans.png), url(./images/headerBack.png);
   background-repeat: no-repeat, no-repeat;
   background-position: 95%;
@@ -47,11 +48,75 @@ body {
 }
 
 .desktop-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  padding-top: 63px;
+  padding-left: 28px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #6070ff;
+  mix-blend-mode: multiply;
+  z-index: 5;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.hide {
   display: none;
 }
 
+.hide-ham {
+  display: inline-block;
+}
+
+.cancel-dropDown {
+  text-align: right;
+  font-size: 2rem;
+  height: 55px;
+  margin-top: -2rem;
+  margin-bottom: 0.5rem;
+}
+
+.desktop-menu ul {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+}
+
+.desktop-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+  line-height: 44px;
+  font-weight: 600;
+}
+
+.desktop-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mobile-line {
+  height: 5px;
+  width: 134px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #0d151e;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
 header {
-  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -667,13 +732,35 @@ textarea:focus {
     display: none;
   }
 
+  .blur {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
   .menu {
     width: 25%;
   }
 
+  .hide {
+    display: none;
+  }
+
   .desktop-menu {
-    display: block;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    margin-top: -28px;
     width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    gap: 0;
+    color: black;
+    background-color: inherit;
+  }
+
+  .mobile-line {
+    display: none;
   }
 
   .desktop-menu li {
@@ -702,10 +789,11 @@ textarea:focus {
   }
 
   .desktop-menu ul {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 32px;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    vertical-align: top;
+    gap: 30px;
   }
 
   .hero {
@@ -733,7 +821,9 @@ textarea:focus {
     position: fixed;
     z-index: 100;
     width: 100%;
-    padding: 25px 40px;
+    padding: 25px 0;
+    padding-left: 70px;
+    padding-right: 70px;
     background-color: #fff;
   }
 
@@ -920,8 +1010,8 @@ textarea:focus {
   }
 
   header {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
 
   .about-section {
