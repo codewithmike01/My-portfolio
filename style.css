@@ -736,6 +736,7 @@ textarea:focus {
     -webkit-filter: blur(0);
     filter: blur(0);
   }
+
   .menu {
     width: 25%;
   }
@@ -747,7 +748,6 @@ textarea:focus {
   .desktop-menu {
     position: relative;
     top: 0;
-    display: flex;
     flex-direction: row;
     margin-top: -28px;
     width: 100%;
@@ -793,7 +793,6 @@ textarea:focus {
     justify-content: flex-start;
     width: 100%;
     vertical-align: top;
-
     gap: 30px;
   }
 
@@ -822,9 +821,9 @@ textarea:focus {
     position: fixed;
     z-index: 100;
     width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    padding: 25px 100px;
+    padding: 25px 0;
+    padding-left: 70px;
+    padding-right: 70px;
     background-color: #fff;
   }
 
