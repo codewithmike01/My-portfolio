@@ -24,3 +24,6 @@ hs_err_pid*
 
 #node modules
 node_modules/
+
+#Rough NOte
+note.txt
