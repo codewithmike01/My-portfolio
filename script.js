@@ -99,10 +99,12 @@ Object.keys(projectObj).forEach((k) => {
       }
       divImg.innerHTML = `<img src= ${projectAll[k]} alt="Tonic-Project Image" />`;
       section.appendChild(divImg.cloneNode(true));
+      // eslint-disable-next-line brace-style
     }
     // name
     else if (k === 'name') {
       writeUp.innerHTML = `<p class='title'>${projectAll[k]}</p>`;
+      // eslint-disable-next-line brace-style
     }
     // Tags
     else if (k === 'tags') {
@@ -113,11 +115,13 @@ Object.keys(projectObj).forEach((k) => {
         <li>${listTags[2]}</li>
       </ul>`;
       writeUp.appendChild(titleDetail);
+      // eslint-disable-next-line brace-style
     }
     // description
     else if (k === 'description') {
       descriptionPara.textContent = `${projectAll[k]}`;
       writeUp.appendChild(descriptionPara);
+      // eslint-disable-next-line brace-style
     }
     // technology used
     else if (k === 'technology') {
@@ -125,11 +129,13 @@ Object.keys(projectObj).forEach((k) => {
       let listFill = '';
 
       // for dynamic tech tag length
+      // eslint-disable-next-line no-plusplus
       for (let i = 0; i < listTechTag.length; i++) {
         listFill += `<li> ${listTechTag[i]}</li>`;
       }
       ulTech.innerHTML = `${listFill}`;
       writeUp.appendChild(ulTech);
+      // eslint-disable-next-line brace-style
     }
     // button
     else if (k === 'projectDetails') {
@@ -138,6 +144,7 @@ Object.keys(projectObj).forEach((k) => {
       section.appendChild(writeUp.cloneNode(true));
     }
   });
+  // eslint-disable-next-line no-plusplus
   count++;
   projectSection.appendChild(section);
 });
@@ -194,24 +201,36 @@ Object.keys(projectObj).forEach((k) => {
   const modalCard = document.createElement('div');
   modalCard.classList.add('modal-card');
   Object.keys(projectModalAll).forEach((k) => {
+    const widthScreen = 991;
     if (k === 'name') {
       h4.textContent = `${projectModalAll[k]}`;
-      CancelDiv.innerHTML = `<div class='image-cancel'>&times</div>`;
+      CancelDiv.innerHTML = '<div class="image-cancel">&times</div>';
       modalHead.appendChild(h4);
       modalHead.appendChild(CancelDiv);
       modalCard.appendChild(modalHead.cloneNode(true));
     }
     if (k === 'imageUrl') {
-      if (modalCount === 1) {
-        modalImage.setAttribute('id', 'oneModal');
-      } else if (modalCount === 2) {
-        modalImage.setAttribute('id', 'two');
-      } else if (modalCount === 3) {
-        modalImage.setAttribute('id', 'three');
+      if (window.screen.width > widthScreen) {
+        if (modalCount === 1) {
+          // eslint-disable-next-line operator-linebreak
+          modalImage.innerHTML =
+            '<img src="./images/DeskImg1.png" alt="Image of project" />';
+        } else if (modalCount === 2) {
+          // eslint-disable-next-line operator-linebreak
+          modalImage.innerHTML =
+            '<img src="./images/DeskImg2.png" alt="Image of project" />';
+        } else if (modalCount === 3) {
+          // eslint-disable-next-line operator-linebreak
+          modalImage.innerHTML =
+            '<img src="./images/DEskImg3.png" alt="Image of project" />';
+        } else {
+          // eslint-disable-next-line operator-linebreak
+          modalImage.innerHTML =
+            '<img src="./images/DeskImg4.png" alt="Image of project" />';
+        }
       } else {
-        modalImage.setAttribute('id', 'four');
+        modalImage.innerHTML = `<img src="${projectModalAll[k]}" alt="Image of project" />`;
       }
-      modalImage.innerHTML = ` <img src="${projectModalAll[k]}" alt="Image of project" />`;
       mainModal.appendChild(modalImage);
       modalCard.append(mainModal);
     }
@@ -222,7 +241,7 @@ Object.keys(projectObj).forEach((k) => {
         <li>${listModalTags[1]}</li>
         <li>${listModalTags[2]}</li>
       </ul>`;
-      mainModal.appendChild(modalTags);
+      mainModal.append(modalTags);
       modalCard.appendChild(mainModal);
     }
     if (k === 'description') {
@@ -235,6 +254,7 @@ Object.keys(projectObj).forEach((k) => {
       const listModal = projectModalAll[k];
       let listModalFill = '';
 
+      // eslint-disable-next-line no-plusplus
       for (let j = 0; j < listModal.length; j++) {
         listModalFill += `<li> ${listModal[j]}`;
       }
@@ -259,6 +279,7 @@ Object.keys(projectObj).forEach((k) => {
       flexRight.appendChild(liveButton);
     }
   });
+  // eslint-disable-next-line no-plusplus
   modalCount++;
   sectionModal.appendChild(modalCard);
   sectionModal.appendChild(cardLine);
@@ -267,6 +288,7 @@ Object.keys(projectObj).forEach((k) => {
 
 const modalAll = Array.from(document.getElementsByClassName('modal-container'));
 const modalImageCancel = Array.from(
+  // eslint-disable-next-line comma-dangle
   document.getElementsByClassName('image-cancel')
 );
 
@@ -310,6 +332,11 @@ Object.keys(modalImageCancel).forEach((k) => {
       modalAll[k].classList.toggle('modalfour');
     }
   });
+});
+
+// Reload on screen size change
+window.addEventListener('resize', () => {
+  window.location.reload();
 });
 
 /* Mobile Menu */
