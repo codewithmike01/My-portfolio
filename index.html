@@ -12,9 +12,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "UA-167584431-2");
+      gtag('config', 'UA-167584431-2');
     </script>
 
     <meta charset="UTF-8" />
@@ -24,6 +24,7 @@
     <title>Mike's profolio page</title>
   </head>
   <body>
+    <!-- Hero Section -->
     <section class="hero">
       <div class="desktop-bg"></div>
       <!-- header -->
@@ -49,6 +50,7 @@
           </section>
         </nav>
       </header>
+
       <!-- banner -->
       <section class="banner">
         <h1 class="greet">I'm Mike <br />Glad to see you!</h1>
@@ -58,7 +60,7 @@
           you see and have a project you need coded, don’t hestiate to contact
           me.
         </p>
-        <!-- Connect -->
+        <!-- Let's Connect -->
         <section class="connect">
           <h2>LET'S CONNECT</h2>
           <ul class="social-icon">
@@ -92,124 +94,12 @@
 
     <!-- main -->
     <main>
-      <section class="project-show-case">
+      <!-- Car Showcase generated dynamically using Javascrpit -->
+      <section id="project-show-case">
         <a name="portfolio"></a>
-        <section class="project-card" id="portfolio">
-          <div class="project-img one">
-            <img src="./images/imageprofile4x.png" alt="Tonic-Project Image" />
-          </div>
-
-          <section class="write-up">
-            <p class="title">Tonic</p>
-            <section class="title-detail-tag">
-              <span class="tag-title">CANOPY</span>
-              <ul class="list-tag-title">
-                <li>Back End Dev</li>
-                <li>2015</li>
-              </ul>
-            </section>
-            <p class="project-description">
-              A daily selection of privately personalized reads; no accounts or
-              sign-ups required.
-            </p>
-            <ul class="lang-tag">
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-            <button type="button" class="see-project">
-              <span class="p">See Project</span>
-            </button>
-          </section>
-        </section>
-        <section class="project-card">
-          <div class="project-img two">
-            <img src="./images/MutiPostStory.svg" alt="Tonic-Project Image" />
-          </div>
-
-          <section class="write-up">
-            <p class="title">Multi-Post Stories</p>
-            <section class="title-detail-tag">
-              <span class="tag-title">CANOPY</span>
-              <ul class="list-tag-title">
-                <li>Back End Dev</li>
-                <li>2015</li>
-              </ul>
-            </section>
-            <p class="project-description">
-              A daily selection of privately personalized reads; no accounts or
-              sign-ups required.
-            </p>
-            <ul class="lang-tag">
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-            <button type="button" class="see-project">
-              <span class="p">See Project</span>
-            </button>
-          </section>
-        </section>
-        <section class="project-card">
-          <div class="project-img three">
-            <img src="./images/TonicColor.svg" alt="Tonic-Project Image" />
-          </div>
-
-          <section class="write-up">
-            <p class="title">Facebook 360</p>
-            <section class="title-detail-tag">
-              <span class="tag-title">FACEBOOK</span>
-              <ul class="list-tag-title">
-                <li>Full Stack Dev</li>
-                <li>2015</li>
-              </ul>
-            </section>
-            <p class="project-description">
-              Exploring the future of media in Facebook's first Virtual Reality
-              app; a place to discover and enjoy 360 photos and videos on Gear
-              VR.
-            </p>
-            <ul class="lang-tag">
-              <li>html</li>
-              <li>Ruby on Rails</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-            <button type="button" class="see-project">
-              <span class="p">See Project</span>
-            </button>
-          </section>
-        </section>
-        <section class="project-card">
-          <div class="project-img four">
-            <img src="./images/Multipost2.svg" alt="Multi post Image" />
-          </div>
-
-          <section class="write-up">
-            <p class="title">Uber Navigation</p>
-            <section class="title-detail-tag">
-              <span class="tag-title">Uber</span>
-              <ul class="list-tag-title">
-                <li>Lead Developer</li>
-                <li>2018</li>
-              </ul>
-            </section>
-            <p class="project-description">
-              A smart assistant to make driving more safe, efficient, and fun by
-              unlocking your most expensive computer: your car.
-            </p>
-            <ul class="lang-tag">
-              <li>html</li>
-              <li>Ruby on Rails</li>
-              <li>css</li>
-              <li>javascript</li>
-            </ul>
-            <button type="button" class="see-project">
-              <span class="p">See Project</span>
-            </button>
-          </section>
-        </section>
       </section>
+
+      <!-- About Me -->
       <a name="about"></a>
       <section class="about-section">
         <section class="about-write">
@@ -337,8 +227,7 @@
       </section>
     </main>
 
-    <!-- contact me section -->
-
+    <!-- Footer -->
     <footer>
       <div class="trans-background"></div>
       <a id="contact"></a>
@@ -394,7 +283,6 @@
       </section>
       <div class="footer-line"></div>
     </footer>
-
     <!-- End of contact me section -->
   </body>
 </html>
