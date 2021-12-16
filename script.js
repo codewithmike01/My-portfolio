@@ -419,7 +419,7 @@ formOne.addEventListener('keyup', () => {
   getUserData();
 });
 
-// Check and set user input value if local storage is true (not empty)
+// Check and set user input value only when local storage is not empty
 if (lStorage) {
   setUserData();
 }
