@@ -7,11 +7,10 @@ const navP = document.querySelector('.banner-detail');
 const letConnect = document.querySelector('.connect');
 const logo = document.querySelector('.logo');
 const projectSection = document.getElementById('project-show-case');
-
 let count = 1;
 let modalCount = 1;
 
-// creting global elements ( For Cards)
+// Creting Global elements ( For Cards)
 const divImg = document.createElement('div');
 divImg.setAttribute('class', 'project-img');
 
@@ -195,7 +194,6 @@ const cardModal = Array.from(document.getElementsByClassName('see-project'));
 // Modal Creation
 Object.keys(projectObj).forEach((k) => {
   const projectModalAll = projectObj[k];
-
   const sectionModal = document.createElement('section');
   sectionModal.classList.add('modal-container');
   const modalCard = document.createElement('div');
@@ -292,7 +290,7 @@ const modalImageCancel = Array.from(
   document.getElementsByClassName('image-cancel')
 );
 
-// Add the display None ID
+// Add the display None Class
 Object.keys(modalAll).forEach((k) => {
   if (k === '0') {
     modalAll[k].classList.add('class', 'modalOne');
@@ -305,6 +303,7 @@ Object.keys(modalAll).forEach((k) => {
   }
 });
 
+// Show modal
 Object.keys(cardModal).forEach((k) => {
   cardModal[k].addEventListener('click', () => {
     if (k === '0') {
@@ -357,4 +356,36 @@ Object.keys(navLinks).forEach((k) => {
   if (k !== '') {
     navLinks[k].addEventListener('click', closeMobileMenu);
   }
+});
+
+// Form Validation
+const formOne = document.getElementById('formOne');
+const email = document.getElementById('email');
+let errorMsg = document.getElementById('errorMsg');
+let emailTest = '';
+let formTest = false;
+
+// eslint-disable-next-line no-trailing-spaces
+/* Get lowercase of each vale in 
+email for testing real user case value */
+email.addEventListener('keyup', () => {
+  emailTest = email.value.toLowerCase();
+});
+
+formOne.addEventListener('submit', (e) => {
+  if (emailTest !== email.value) {
+    errorMsg.innerText = 'Message goes here';
+    if (formTest === false) {
+      errorMsg.classList.toggle('hideErr');
+    }
+    formTest = true;
+    // To remove the errMsg when email input is clicked
+    email.addEventListener('click', () => {
+      if (formTest === true) {
+        errorMsg.classList.toggle('hideErr');
+      }
+      formTest = false;
+    });
+    e.preventDefault();
+  } else errorMsg = '';
 });
