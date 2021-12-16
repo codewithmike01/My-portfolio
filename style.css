@@ -1201,7 +1201,12 @@ textarea:focus {
   }
 
   .modal-card {
-    margin: 0 19rem;
+    height: 940px;
+    overflow-y: auto;
+    margin: 0 auto;
+    left: 17%;
+    right: 20%;
+    width: 70%;
     max-width: 950px;
   }
 
@@ -1210,7 +1215,7 @@ textarea:focus {
   }
 
   .flexDesk p {
-    flex: 2;
+    flex: 1;
   }
 
   .flex-right {
@@ -1250,9 +1255,5 @@ textarea:focus {
 
   .about-section {
     padding-right: 110px;
-  }
-
-  .modal-card {
-    margin: 0 15rem;
   }
 }

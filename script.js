@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 const ham = document.querySelector('.hide-ham');
 const menuLink = document.querySelector('.desktop-menu');
 const cancelMenu = document.querySelector('.cancel-dropDown');
@@ -358,9 +359,13 @@ Object.keys(navLinks).forEach((k) => {
   }
 });
 
-// Form Validation
+// FORM VALIDATION & LOCAL STORAGE
 const formOne = document.getElementById('formOne');
+const inputName = document.getElementById('name');
 const email = document.getElementById('email');
+const textArea = document.getElementById('textArea');
+const lStorage = window.localStorage.getItem('data');
+const formEntry = {};
 let errorMsg = document.getElementById('errorMsg');
 let emailTest = '';
 let formTest = false;
@@ -368,6 +373,8 @@ let formTest = false;
 // eslint-disable-next-line no-trailing-spaces
 /* Get lowercase of each vale in 
 email for testing real user case value */
+
+// Validation Starts
 email.addEventListener('keyup', () => {
   emailTest = email.value.toLowerCase();
 });
@@ -389,3 +396,30 @@ formOne.addEventListener('submit', (e) => {
     e.preventDefault();
   } else errorMsg = '';
 });
+
+// Local Storage Get user input Data
+function getUserData() {
+  formEntry[inputName.name] = inputName.value;
+  formEntry[email.name] = email.value;
+  formEntry[textArea.name] = textArea.value;
+  let items = JSON.stringify(formEntry);
+  localStorage.setItem('data', `${items}`);
+}
+
+// Set user input value
+function setUserData() {
+  const holdObj = JSON.parse(lStorage);
+  inputName.value = holdObj.userName;
+  email.value = holdObj.replyto;
+  textArea.value = holdObj.message;
+}
+
+// on keyup to listen to User input
+formOne.addEventListener('keyup', () => {
+  getUserData();
+});
+
+// Check and set user input value if local storage is true (not empty)
+if (lStorage) {
+  setUserData();
+}
