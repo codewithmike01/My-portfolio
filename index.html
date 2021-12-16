@@ -243,7 +243,11 @@
           </p>
         </div>
         <div class="contact-form">
-          <form action="https://formspree.io/f/mvolpwjz" method="POST">
+          <form
+            action="https://formspree.io/f/mvolpwjz"
+            method="POST"
+            id="formOne"
+          >
             <ul>
               <li>
                 <input
@@ -258,7 +262,7 @@
               <li>
                 <input
                   type="email"
-                  name="_replyto"
+                  name="replyto"
                   id="email"
                   placeholder="natajayani@gmail.com"
                   required
@@ -268,6 +272,7 @@
               <li>
                 <textarea
                   name="message"
+                  id="textArea"
                   class="text-area"
                   cols="60"
                   rows="10"
@@ -277,7 +282,10 @@
                 ></textarea>
               </li>
             </ul>
-            <button type="submit" class="form-button">Get in touch</button>
+            <div class="button-errorMsg">
+              <div id="errorMsg" class="hideErr"></div>
+              <button type="submit" class="form-button">Get in touch</button>
+            </div>
           </form>
         </div>
       </section>
