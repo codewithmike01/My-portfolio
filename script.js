@@ -381,7 +381,7 @@ email.addEventListener('keyup', () => {
 
 formOne.addEventListener('submit', (e) => {
   if (emailTest !== email.value) {
-    errorMsg.innerText = 'Message goes here';
+    errorMsg.innerText = 'Email should be lowercase.';
     if (formTest === false) {
       errorMsg.classList.toggle('hideErr');
     }
