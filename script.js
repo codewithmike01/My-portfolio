@@ -34,15 +34,15 @@ cardButton.setAttribute('type', 'button');
 // Object storage for project details
 const projectObj = {
   projectOne: {
-    imageUrl: './images/imageprofile4x.png',
-    name: 'Tonic',
-    tags: ['CANOPY', 'Back End Dev', '2015'],
+    imageUrl: './images/todoListImage.png',
+    name: 'Todo List',
+    tags: ['TODO LIST', 'Front End Dev', '2021'],
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    technology: ['html', 'css', 'javascript'],
+      'A Todo List built with javascript, using Webpage features, to enable users to Add list of Todo Items, Edit Items and also delete ccompleted items',
+    technology: ['html', 'css', 'javascript', 'WebPack'],
     projectDetails: 'See project',
-    liveLink: '#',
-    sourceLink: '#',
+    liveLink: 'https://ginohmk.github.io/TodoList-With-Webpack',
+    sourceLink: 'https://github.com/Ginohmk/TodoList-With-Webpack.git',
   },
   projectTwo: {
     imageUrl: './images/MutiPostStory.svg',
